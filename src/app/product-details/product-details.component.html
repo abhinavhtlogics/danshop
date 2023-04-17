@@ -1,0 +1,294 @@
+
+<header class="header header-inner">    
+  <div class="head-top">
+    <div class="container">	  
+      <div class="row">
+	  
+        <div class="col-sm-12">	
+          <div class="product_search_form">
+		   <form>
+			 <div class="collapse" id="search-input">
+			   <div class="card card-body">
+				 <div class="input-group">
+                   <input name="s" id="s" class="form-control" placeholder="Search" required="" type="text">
+                   <button type="submit" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+				 </div>
+			   </div>
+			 </div>
+			 
+			   <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#search-input" aria-expanded="false" aria-controls="search-input"><span class="fa fa-fw fa-search" title="search" aria-hidden="true"></span><span class="sr-only">Search</span></button>
+            </form>		 
+          </div>
+		  
+		  <div class="account-view">
+		    <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#account" aria-expanded="false" aria-controls="account"><i class="fa fa-user-o"></i></button>
+			
+			<div class="collapse" id="account">
+			  <div class="card card-body">
+			    <ul>
+                  <li><a href="#"> <i class="fa fa-user"></i> Register</a></li>
+                  <li><a href="#">  <i class="fa fa-sign-in"></i> Login</a></li>
+                </ul>
+			  </div>
+			</div>
+          </div>
+		  
+		  <div class="cart-button">		  
+		    <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cart" aria-expanded="false" aria-controls="cart"><img src="../assets/images/cart.png" alt="image">
+			  <div class="cartco"><span id="cart-total"><span class="cartcount">{{cart.length}}</span></span></div></button>
+			
+			<div class="collapse" id="cart">
+			  <div class="card card-body">
+			    <ul>
+              <li>
+			    <table class="table table-striped">
+                  <tbody>
+                    <tr *ngFor="let item of cart; let index = index">
+                      <td class="text-center"> <a routerLink="#"><img src="./assets/images/product-01.png" alt="" title="" class="img-thumbnail"></a></td>
+                      <td class="text-left"> <a routerLink="#">{{item.name}}</a></td>
+                      <td class="text-right">x {{item.quantity}}</td>
+                      <td class="text-right">ZAR {{item.price}}</td>
+                      <td class="text-center"><button type="button" [attr.data-indexId]="item.id"  (click)="onRemoveCart($event)" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times" [attr.data-indexId]="item.id"></i></button></td>
+                    </tr>
+				  </tbody>
+				</table>
+			  </li>
+			  <li>
+			    <div>
+				  <table class="table table-bordered">
+                    <tbody>
+					  <tr>
+					    <td class="text-right">Sub-Total</td>
+						<td class="text-right">ZAR 1,156.52</td>
+					  </tr>
+					  <tr>
+					    <td class="text-right">Vat(15%)</td>
+						<td class="text-right">ZAR 173.48</td>
+					  </tr>
+					  <tr>
+					    <td class="text-right">Total</td>
+						<td class="text-right">ZAR 1,330.00</td>
+					  </tr>
+                    </tbody>
+				  </table>
+				  <p class="text-right"><a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> View Cart</a>&nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a></p>
+				</div>
+			  </li>
+            </ul>
+			  </div>
+			</div>
+          </div>
+		</div><!--/ coll -->
+  
+      </div>
+    </div>
+  </div>
+  
+  <div class="menu-head">             
+    <div class="container">	  
+      
+	  <nav class="navbar navbar-expand-lg">
+	    <div class="container-fluid">
+		  <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		  
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ms-xxl-auto">
+			  <li><a href="#">Safety Gear</a>
+			    <ul class="sub-menu">
+				  <li><a href="#">Oxygen Units</a></li>
+				  <li><a href="#">Oxygen Accessories</a></li>
+				  <li><a href="#">First Aid Kits</a></li>
+				  <li><a href="#">First Aid Accessories</a></li>
+				  <li><a href="#">Dive Safety</a></li>              
+				  <li><a href="#">Show AllSafety Gear</a></li>
+				</ul>
+			  </li>    
+			  
+			  <li><a href="#">Clothing</a>
+			    <ul class="sub-menu">
+				  <li><a href="#">DAN T-Shirts</a></li>
+				  <li><a href="#">DAN Stay Salty T-Shirts</a></li>
+				  <li><a href="#">Frogfish T-Shirt</a></li>
+				  <li><a href="#">Octopus T-Shirt</a></li>
+				  <li><a href="#">Rash Vests</a></li>
+				  <li><a href="#">Show AllClothing</a></li>
+				</ul>
+			  </li>  
+			  
+			  <li><a href="#">Jewellery</a></li>
+			  <li><a href="#">Promotional</a></li>
+			  <li><a href="#">Training</a>
+			    <ul class="sub-menu">
+				  <li><a href="#">Trainer Aids</a></li>
+				  <li><a href="#">Show AllTraining</a></li>
+				</ul>        
+			  </li> 
+			  <li><a href="#">Tags</a></li>
+			  <li><a href="#">Membership</a>
+			    <ul class="sub-menu">
+				  <li><a href="#">Recreational Divers</a></li>
+				  <li><a href="#">Professional Divers</a></li>
+				  <li><a href="#">Commercial Divers</a></li>
+				  <li><a href="#">Commercial Companies</a></li>
+				  <li><a href="#">Commercial Dive Schools</a></li>
+				  <li><a href="#">Temporary Membership</a></li>
+				  <li><a href="#">Show AllMembership</a></li>
+			    </ul>
+		      </li>
+		    </ul>
+			
+		  </div>
+	    </div>
+	  </nav>
+	    
+    </div><!--/ menu-head -->           
+  </div><!--/ container -->
+</header>
+
+
+<section class="breadcrumb">
+  <div class="container">
+  
+    <ul>
+	  <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+	  <li>Product</li>
+	</ul>
+	
+  </div>
+</section>
+<!-- <main class="container">
+
+    Left Column / Headphones Image 
+    <div class="left-column">
+     <img data-image="black" src="{{product.featuredAsset.source}}" alt="">
+     
+    </div>
+
+
+    Right Column 
+    <div class="right-column">
+
+       Product Description 
+      <div class="product-description" *ngIf="product">
+        <span>Headphones</span>
+        <h1 >{{product.name}}</h1>
+        <p>{{product.description}}</p>
+      </div>
+
+       Product Configuration 
+      <div class="product-configuration">
+
+         Product Color 
+       
+
+         Cable Configuration 
+     
+      </div>
+
+       Product Pricing 
+      <div class="product-price">
+        <span>ZAR {{product.variants[0].price}}</span>
+        <a href="#" class="cart-btn" [attr.data-productId]="product.id" [attr.data-productName]="product.name" [attr.data-productPrice]="product.variants[0].price" (click)="myFunction($event)">Add to cart</a>
+      </div>
+    </div>
+  </main> -->
+
+  <section class="mid-inner">
+    <div class="container">
+      <div class="row">
+  
+      <div class="col-sm-12 full-wrap">
+      
+        <!-- <div class="cart-notices">
+        <div class="cart-message">
+          <p>Success: You have added First Aid Backpack with Oxygen to your shopping cart!</p>
+        <p><a href="#" class="btn">View Cart</a></p>
+        </div>
+      </div> -->
+      
+        <div class="product-single">
+        <div class="row">
+          
+        <div class="col-sm-6 left">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-inner">
+          
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="{{product.featuredAsset.source}}" class="" alt="">
+            </div>
+            
+           
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+          
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+          </div>
+          
+          
+          </div>
+        </div><!--/ left -->
+        
+        <div class="col-sm-6 right">
+          <h2>{{product.name}}</h2>
+          <ul class="list-unstyled">
+            <li>Brand: <a href="#" *ngFor="let collection of product.collections">{{collection.name}} </a></li>
+          <li>Product Code:{{product.variants[0].sku}}</li>
+          <li>Availability:{{product.variants[0].stockLevel}}</li>
+          </ul>
+          
+          <p class="price"><ins>ZAR {{product.variants[0].price}}</ins><small>Ex Tax:ZAR 12,382.61</small></p>
+          
+          <form class="cart quantity">
+            <div class="quantity-input">
+            <input type='button' value='-' class='qtyminus minus' field='quantity' />
+            <input type='text' name='quantity' value='1' class='qty' />
+            <input type='button' value='+' class='qtyplus plus' field='quantity' />
+          </div>
+          <button type="submit" name="add-to-cart" value="838" class="btn" [attr.data-productId]="product.id" [attr.data-productName]="product.name" [attr.data-productPrice]="product.variants[0].price" (click)="myFunction($event)">Add to cart</button>
+          </form>	  
+          </div><!--/ right -->
+        
+        <div class="col-sm-12 full-area">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="pills-description-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description" aria-selected="true">Description</button></li>
+          
+          <li class="nav-item" role="presentation"><button class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews (0)</button></li>
+          </ul>
+          
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab" tabindex="0">
+            <h3>{{product.name}}</h3>
+            <p>{{product.description}}</p>
+            
+            <!-- <h4>Includes</h4>
+            <ul>
+              <li>1-Tourniquet</li>
+            <li>1-Pin Index Aluminium 2ltr cylinder (empty)</li>
+            <li>1-Brass multi function regulator</li>
+            <li>1-Demand valve with hose</li>
+            <li>2-Non-Rebreather mask</li>
+            <li>1- Oronasal resuscitation mask</li>
+            <li>1-Backpack First Aid kit</li>
+            </ul> -->
+          </div><!--/ tab-pane -->
+          
+          <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab" tabindex="0">
+            <p>There are no reviews for this product.</p>
+            <h3>Write a review</h3>
+            <p>Please <a href="https://danshop.co.za/index.php?route=account/login">login</a> or <a href="https://danshop.co.za/index.php?route=account/register">register</a> to review</p>
+          </div><!--/ tab-pane -->
+          </div>
+          </div><!--/ full-area -->
+        
+        </div><!--/ row -->
+          </div><!--/ products-wrap -->	  
+            
+        </div>	
+      </div><!--/ row -->	
+    </div>
+  </section><!--/ mid-inner -->  
+
+<app-footer></app-footer>
+
+ 

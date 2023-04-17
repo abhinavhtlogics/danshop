@@ -1,0 +1,44 @@
+.footer{padding:70px 0 30px; font-size:14px; position:relative; background:#101010; color:#b0b0b0;} 
+  .footer a{color:#b0b0b0;}
+  .footer a:hover{color:#dd1717;}
+  .footer .footer-left{padding:0 7% 0 15px;}
+  .footer .footer-left p{font-size:15px; line-height:23px;}
+  .wg-1{margin:0 0 30px;}
+  .wg-1 p{font-size:17px; line-height:27px;}
+  .wg-1 h4{color:#dd1717; font-size:20px; margin:0 0 20px; position:relative;}
+  .wg-1 ul{margin:0; padding:0;}
+  .wg-1 ul li{list-style:none; position:relative; padding: 0 0 3px;}
+  .ft-logo{margin:0 0 20px;}
+  .ft-logo img{}
+  .icon-ft{margin:10px 0 0;}
+  .icon-ft i{color: #fff; border:1px solid transparent; display:inline-block; font-size: 14px; line-height: 34px; margin: 0 0 0 2px; height: 34px; text-align: center; width: 34px; text-align: center; position:relative; z-index:1; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+  .icon-ft .fa-facebook{background:#3a5896;}
+  .icon-ft .fa-facebook:hover{background:none; border-color:#3a5896; color:#3a5896;}
+  .icon-ft .fa-twitter{background:#00aced;}
+  .icon-ft .fa-twitter:hover{background:none; border-color:#00aced; color:#00aced;}
+  .icon-ft .fa-youtube{background:#b00;}
+  .icon-ft .fa-youtube:hover{background:none; border-color:#b00; color:#b00;}
+  .icon-ft .fa-linkedin{background:#007ab5;}
+  .icon-ft .fa-linkedin:hover{background:none; border-color:#007ab5; color:#007ab5;}
+  .icon-ft .fa-instagram{background: #f09433; background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );}
+  .icon-ft .fa-linkedin:hover{background:none; border-color:#007ab5; color:#007ab5;}
+  .icon-ft .fa-google-plus{background: #dc4e41;}
+  .icon-ft .fa-google-plus:hover{background:none; border-color:#dc4e41; color:#dc4e41;}
+  .icon-ft i:hover{color:#fff; transition:0.8s ease-in-out; -webkit-transition:all 0.8s ease-in-out; -moz-transition:all 0.8s ease-in-out; -ms-transition:all 0.8s ease-in-out; -o-transition:all 0.8s ease-in-out;}  
+    
+  .ft-bottom{margin:0; position:relative; z-index:2;}  
+  .ft-bottom .row{align-items: center;}  
+  .ft-bottom .copyright{margin:3px 0; font-size:16px; color:#b0b0b0;}
+  .Newsletter{position: relative; justify-content: space-between; align-items: center; align-content: center; display: flex;}
+  .Newsletter h5{color:#b0b0b0; font-size:16px; margin:0; position:relative;}
+  .Newsletter h5 span{font-size:16px; color:#b0b0b0; margin:0 0 0 10px;}
+  .Newsletter form{position:relative; padding:0;}
+  .Newsletter form .form-control{background:#f5f5f5; font-size: 14px; border: none; box-shadow:none; -webkit-border-radius:3px 0 0 3px; -moz-border-radius:03px 0 0 3px; border-radius:3px 0 0 3px; color: #000; text-align:center; height:34px;}
+  .Newsletter form .form-control::-webkit-input-placeholder {color: #b0b0b0;}
+  .Newsletter form .form-control::-moz-placeholder {color: #b0b0b0;}
+  .Newsletter form .form-control:-ms-input-placeholder {color: #b0b0b0;}
+  .Newsletter form .form-control:-moz-placeholder {color: #b0b0b0;}
+  .Newsletter form .form-group{margin:0 0 25px;}
+  .Newsletter form .btn{position:relative; background: #dd1717; font-family: 'Lato', sans-serif; font-weight:700; color: #fff; text-align: center; text-shadow:none; text-transform:uppercase; -webkit-animation-delay: 2s; animation-delay: 2s; -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out; transition: background 0.3s ease-in-out, color 0.3s ease-in-out; text-align: center; margin:0; padding: 5px 15px; border:0; -webkit-border-radius:0 3px 3px 0; -moz-border-radius:0 3px 3px 0; border-radius:0 3px 3px 0; font-size: 14px; text-transform:capitalize;}
+  .Newsletter form .btn:hover, .Newsletter form .btn:active{background: #3c3e93; color: #fff;}
+  .wg-1 ul{margin:0; padding:0;}

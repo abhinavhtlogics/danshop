@@ -1,0 +1,155 @@
+<!-- <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngfor="let prod of allProducts">
+       <td>test</td>
+      
+       
+      </tr>
+    </tbody>
+  </table> -->
+
+
+  <section class="featured-products">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-sm-12 title">
+          <h2>Featured Products</h2>
+          <div class="shop-btn"><a href="#" class="btn active-btn">Shop all</a></div>
+        </div>
+        
+        <div class="col-sm-12 col-padd" *ngIf="allProducts">
+
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let prod of allProducts">
+                    <div class="item" >
+                    <div class="image" *ngIf="prod.featuredAsset"><a [routerLink]="['/product-details/',prod.id]"><img src="{{prod.featuredAsset.source}}" alt="" height="200px"></a></div>		  
+                    <div class="caption">
+                      <h4><a [routerLink]="['/product-details/',prod.id]" class="woocommerce-LoopProduct-link">{{prod.name}}</a></h4>
+                      <div class="star-rating">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i>
+                      </div>
+                      <p>{{prod.description}}</p>
+                      <p class="price">
+                        <ins *ngIf="prod.variants">ZAR {{prod.variants[0].price}}</ins>
+                        <small>Ex Tax:ZAR 12,382.61</small>
+                      </p>
+
+                      <div class="button-group">
+                        <button type="button" data-toggle="tooltip" title="Add to Cart" [attr.data-productId]="prod.id" [attr.data-productName]="prod.name" [attr.data-productPrice]="prod.variants[0].price" (click)="myFunction($event)"><i class="fa fa-shopping-cart" aria-hidden="true" [attr.data-productId]="prod.id" [attr.data-productName]="prod.name" [attr.data-productPrice]="prod.variants[0].price" ></i></button>
+                        <button type="button" data-toggle="tooltip" title="Add to Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                      </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o> 
+              
+            <!-- <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="image"><a href="#"><img src="../assets/images/product-02.png" alt=""></a></div>		  
+                        <div class="caption">
+                          <h4><a href="#" class="woocommerce-LoopProduct-link">Marine MedKit 2.0</a></h4>
+                          <div class="star-rating">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i>
+                          </div>
+                          <p>DAN Marine MedKit (631-2605) Water-resistant pouch with handle and clear storage compartments for ea..</p>
+                          <p class="price">
+                            <ins>ZAR 1,330.00</ins>
+                            <small>Ex Tax:ZAR 1,156.52</small>
+                          </p>
+                          
+                          <div class="button-group">
+                            <button type="button" data-toggle="tooltip" title="Add to Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            <button type="button" data-toggle="tooltip" title="Add to Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                </ng-template>  
+
+ 
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="image"><a href="#"><img src="../assets/images/product-03.png" alt=""></a></div>		  
+                        <div class="caption">
+                          <h4><a href="#" class="woocommerce-LoopProduct-link">Grab and Go Travel Pack</a></h4>
+                          <div class="star-rating">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i>
+                          </div>
+                          <p>Grab&Go Travel Pack (631-3115) The DAN Grab & Go Travel First Aid Kit is stocked with a su..</p>
+                          <p class="price">
+                            <ins>ZAR 585.00</ins>
+                            <small>Ex Tax:ZAR 508.70</small>
+                          </p>
+                          
+                          <div class="button-group">
+                            <button type="button" data-toggle="tooltip" title="Add to Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            <button type="button" data-toggle="tooltip" title="Add to Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                </ng-template>
+
+
+
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="image"><a href="#"><img src="../assets/images/product-04.png" alt=""></a></div>		  
+                        <div class="caption">
+                          <h4><a href="#" class="woocommerce-LoopProduct-link">DAN Unisex Divers Alert Network T-Shirt - Navy</a></h4>
+                          <div class="star-rating">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i>
+                          </div>
+                          <p>Unisex Love DAN Tee  DAN logo on the left sleeveSmall DAN logo on the backLarge Heart shaped un..</p>
+                          <p class="price">
+                            <ins>ZAR 312.00</ins>
+                            <small>Ex Tax:ZAR 271.30</small>
+                          </p>
+                          
+                          <div class="button-group">
+                            <button type="button" data-toggle="tooltip" title="Add to Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            <button type="button" data-toggle="tooltip" title="Add to Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                </ng-template>
+
+
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="image"><a href="#"><img src="../assets/images/product-05.png" alt=""></a></div>		  
+                        <div class="caption">
+                          <h4><a href="#" class="woocommerce-LoopProduct-link">DAN Unisex Stay Salty T-Shirt - Navy</a></h4>
+                          <div class="star-rating">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-empty"></i>
+                          </div>
+                          <p>Unisex Stay Salty Tee - 140gm DAN logo on the left sleeveSmall DAN logo on the backLarge Heart shape..</p>
+                          <p class="price">
+                            <ins>ZAR 312.00</ins>
+                            <small>Ex Tax:ZAR 271.30</small>
+                          </p>
+                          
+                          <div class="button-group">
+                            <button type="button" data-toggle="tooltip" title="Add to Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                            <button type="button" data-toggle="tooltip" title="Add to Wish List"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                </ng-template>
+               
+              </owl-carousel-o> -->
+
+
+        
+        </div>	  
+            
+      </div><!--/ row -->	
+    </div>
+  </section><!--/ featured-products  -->      

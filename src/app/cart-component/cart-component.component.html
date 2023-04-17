@@ -1,0 +1,411 @@
+
+<header class="header header-inner">    
+    <div class="head-top">
+      <div class="container">	  
+        <div class="row">
+        
+          <div class="col-sm-12">	
+            <div class="product_search_form">
+             <form>
+               <div class="collapse" id="search-input">
+                 <div class="card card-body">
+                   <div class="input-group">
+                     <input name="s" id="s" class="form-control" placeholder="Search" required="" type="text">
+                     <button type="submit" class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                   </div>
+                 </div>
+               </div>
+               
+                 <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#search-input" aria-expanded="false" aria-controls="search-input"><span class="fa fa-fw fa-search" title="search" aria-hidden="true"></span><span class="sr-only">Search</span></button>
+              </form>		 
+            </div>
+            
+            <div class="account-view">
+              <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#account" aria-expanded="false" aria-controls="account"><i class="fa fa-user-o"></i></button>
+              
+              <div class="collapse" id="account">
+                <div class="card card-body">
+                  <ul>
+                    <li><a href="#"> <i class="fa fa-user"></i> Register</a></li>
+                    <li><a href="#">  <i class="fa fa-sign-in"></i> Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="cart-button">		  
+              <button class="btn click-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cart" aria-expanded="false" aria-controls="cart"><img src="../assets/images/cart.png" alt="image">
+                <div class="cartco"><span id="cart-total"><span class="cartcount">0</span></span></div></button>
+              
+              <div class="collapse" id="cart">
+                <div class="card card-body">
+                  <ul>
+                <li>
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr *ngFor="let item of cart; let index = index">
+                            <td class="text-center"> <a routerLink="#"><img src="./assets/images/product-01.png" alt="" title="" class="img-thumbnail"></a></td>
+                            <td class="text-left"> <a routerLink="#">{{item.name}}</a></td>
+                            <td class="text-right">x {{item.quantity}}</td>
+                            <td class="text-right">ZAR {{item.price}}</td>
+                            <td class="text-center"><button type="button" [attr.data-indexId]="item.id"  (click)="onRemoveCart($event)" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times" [attr.data-indexId]="item.id"></i></button></td>
+                          </tr>
+                    </tbody>
+                  </table>
+                </li>
+                <li>
+                  <div>
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="text-right">Sub-Total</td>
+                          <td class="text-right">ZAR 1,156.52</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right">Vat(15%)</td>
+                          <td class="text-right">ZAR 173.48</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right">Total</td>
+                          <td class="text-right">ZAR 1,330.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="text-right"><a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> View Cart</a>&nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-primary"><i class="fa fa-share"></i> Checkout</a></p>
+                  </div>
+                </li>
+              </ul>
+                </div>
+              </div>
+            </div>
+          </div><!--/ coll -->
+    
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu-head">             
+      <div class="container">	  
+        
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-xxl-auto">
+                <li><a href="#">Safety Gear</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Oxygen Units</a></li>
+                    <li><a href="#">Oxygen Accessories</a></li>
+                    <li><a href="#">First Aid Kits</a></li>
+                    <li><a href="#">First Aid Accessories</a></li>
+                    <li><a href="#">Dive Safety</a></li>              
+                    <li><a href="#">Show AllSafety Gear</a></li>
+                  </ul>
+                </li>    
+                
+                <li><a href="#">Clothing</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">DAN T-Shirts</a></li>
+                    <li><a href="#">DAN Stay Salty T-Shirts</a></li>
+                    <li><a href="#">Frogfish T-Shirt</a></li>
+                    <li><a href="#">Octopus T-Shirt</a></li>
+                    <li><a href="#">Rash Vests</a></li>
+                    <li><a href="#">Show AllClothing</a></li>
+                  </ul>
+                </li>  
+                
+                <li><a href="#">Jewellery</a></li>
+                <li><a href="#">Promotional</a></li>
+                <li><a href="#">Training</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Trainer Aids</a></li>
+                    <li><a href="#">Show AllTraining</a></li>
+                  </ul>        
+                </li> 
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Membership</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Recreational Divers</a></li>
+                    <li><a href="#">Professional Divers</a></li>
+                    <li><a href="#">Commercial Divers</a></li>
+                    <li><a href="#">Commercial Companies</a></li>
+                    <li><a href="#">Commercial Dive Schools</a></li>
+                    <li><a href="#">Temporary Membership</a></li>
+                    <li><a href="#">Show AllMembership</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+          
+      </div><!--/ menu-head -->           
+    </div><!--/ container -->
+  </header>
+  
+
+<section class="breadcrumb">
+  <div class="container">
+  
+    <ul>
+	  <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+	  <li>Product</li>
+	  <li>Cart</li>
+	</ul>
+	
+  </div>
+</section>
+
+<section class="mid-inner">
+  <div class="container">
+    <div class="row">
+
+	  <div class="col-sm-12 full-wrap">
+	  
+	    <div class="product-cart">
+		  <div class="row">
+		    
+			<div class="col-sm-12">
+			  <form class="cart-form">
+			    <table class="table table-bordered" cellspacing="0">
+				  <thead>
+				    <tr>
+					  <th class="product-remove">&nbsp;</th>
+					  <th class="product-thumbnail">Image</th>
+					  <th class="product-name">Product</th>
+					  <th class="product-name">Model</th>
+					  <th class="product-price">Price</th>
+					  <th class="product-quantity">Quantity</th>
+					  <th class="product-subtotal">Subtotal</th>
+					</tr>
+				  </thead>
+				  <tbody>
+				    <tr class="woocommerce-cart-form__cart-item cart_item" *ngFor="let item of cart; let index = index">
+					  <td class="product-remove"><a href="#" class="remove" aria-label="Remove this item" data-product_id="1493" [attr.data-indexId]="item.id"  (click)="onRemoveCart($event)" data-product_sku="">×</a></td>
+					  <td class="product-thumbnail"><a href="#"><img src="../assets/images/product-01.png" alt=""></a></td>
+					  <td class="product-name" data-title="Product"><a href="#">{{item.name}}</a></td>
+					  <td class="product-model" data-title="Model No">O2-PB</td>
+					  <td class="product-price" data-title="Price"><span class="woocommerce-Price-amount amount"><bdi>ZAR 14,240.00</bdi></span></td>
+					  <td class="product-quantity" data-title="Quantity">
+					    <div class="cart quantity">
+						  <div class="quantity-input">
+						    <input type='button' value='-' class='qtyminus minus' field='quantity' [attr.data-productId]="item.id" [attr.data-productName]="item.name" [attr.data-productPrice]="item.price" (click)="onCartDec($event)" />
+						    <input type='text' name='quantity' value='{{item.quantity}}' class='qty' />
+						    <input type='button' value='+' class='qtyplus plus' field='quantity' [attr.data-productId]="item.id" [attr.data-productName]="item.name" [attr.data-productPrice]="item.price" (click)="myFunction($event)" />
+						  </div>
+						</div>
+					  </td>
+					  <td class="product-subtotal" data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi>ZAR 28,480.00</bdi></span></td>
+					</tr>
+					
+					
+					
+					
+				  </tbody>
+				</table>
+			  </form>
+			</div>
+			
+			<div class="col-sm-12 cart-full">
+			  <h3>What would you like to do next?</h3>
+			  <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+			</div>
+			
+			<div class="col-sm-7 cart-left">
+			  <div class="accordion" id="accordionExample">
+			    <div class="accordion-item">
+				  <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Use Coupon Code </button></h2>
+				  
+				  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+				    <div class="accordion-body">
+					  <form>
+					    <label class="" for="input-coupon">Enter your coupon here</label>
+					    <div class="input-group">
+					      <input type="text" name="coupon" value="" placeholder="Enter your coupon here" id="input-coupon" class="form-control">
+					      <span class="input-group-btn"><input type="button" value="Apply Coupon" id="button-coupon" data-loading-text="Loading..." class="btn btn-primary"></span>
+					    </div>
+					  </form>
+					</div>
+				  </div>
+				</div>
+				
+				<div class="accordion-item">
+				  <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Estimate Shipping & Taxes</button></h2>
+				  
+				  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				    <div class="accordion-body">
+				      <p>Enter your destination to get a shipping estimate.</p>
+					  <form>
+					    <div class="form-horizontal row">
+						  <div class="form-group required col-sm-4">
+						    <label for="input-country">Country</label>
+							<select name="country_id" id="input-country" class="form-control">
+							  <option value=""> --- Please Select --- </option><option value="244">Aaland Islands</option><option value="1">Afghanistan</option><option value="2">Albania</option><option value="3">Algeria</option><option value="4">American Samoa</option><option value="5">Andorra</option><option value="6">Angola</option><option value="7">Anguilla</option><option value="8">Antarctica</option><option value="9">Antigua and Barbuda</option><option value="10">Argentina</option><option value="11">Armenia</option><option value="12">Aruba</option><option value="252">Ascension Island (British)</option><option value="13">Australia</option><option value="14">Austria</option><option value="15">Azerbaijan</option><option value="16">Bahamas</option><option value="17">Bahrain</option><option value="18">Bangladesh</option><option value="19">Barbados</option><option value="20">Belarus</option><option value="21">Belgium</option><option value="22">Belize</option><option value="23">Benin</option><option value="24">Bermuda</option><option value="25">Bhutan</option><option value="26">Bolivia</option><option value="245">Bonaire, Sint Eustatius and Saba</option><option value="27">Bosnia and Herzegovina</option><option value="28">Botswana</option><option value="29">Bouvet Island</option><option value="30">Brazil</option><option value="31">British Indian Ocean Territory</option><option value="32">Brunei Darussalam</option><option value="33">Bulgaria</option><option value="34">Burkina Faso</option><option value="35">Burundi</option><option value="36">Cambodia</option><option value="37">Cameroon</option><option value="38">Canada</option><option value="251">Canary Islands</option><option value="39">Cape Verde</option><option value="40">Cayman Islands</option><option value="41">Central African Republic</option><option value="42">Chad</option><option value="43">Chile</option><option value="44">China</option><option value="45">Christmas Island</option><option value="46">Cocos (Keeling) Islands</option><option value="47">Colombia</option><option value="48">Comoros</option><option value="49">Congo</option><option value="50">Cook Islands</option><option value="51">Costa Rica</option><option value="52">Cote D'Ivoire</option><option value="53">Croatia</option><option value="54">Cuba</option><option value="246">Curacao</option><option value="55">Cyprus</option><option value="56">Czech Republic</option><option value="237">Democratic Republic of Congo</option><option value="57">Denmark</option><option value="58">Djibouti</option><option value="59">Dominica</option><option value="60">Dominican Republic</option><option value="61">East Timor</option><option value="62">Ecuador</option><option value="63">Egypt</option><option value="64">El Salvador</option><option value="65">Equatorial Guinea</option><option value="66">Eritrea</option><option value="67">Estonia</option><option value="68">Ethiopia</option><option value="69">Falkland Islands (Malvinas)</option><option value="70">Faroe Islands</option><option value="71">Fiji</option><option value="72">Finland</option><option value="74">France, Metropolitan</option><option value="75">French Guiana</option><option value="76">French Polynesia</option><option value="77">French Southern Territories</option><option value="126">FYROM</option><option value="78">Gabon</option><option value="79">Gambia</option><option value="80">Georgia</option><option value="81">Germany</option><option value="82">Ghana</option><option value="83">Gibraltar</option><option value="84">Greece</option><option value="85">Greenland</option><option value="86">Grenada</option><option value="87">Guadeloupe</option><option value="88">Guam</option><option value="89">Guatemala</option><option value="256">Guernsey</option><option value="90">Guinea</option><option value="91">Guinea-Bissau</option><option value="92">Guyana</option><option value="93">Haiti</option><option value="94">Heard and Mc Donald Islands</option><option value="95">Honduras</option><option value="96">Hong Kong</option><option value="97">Hungary</option><option value="98">Iceland</option><option value="99">India</option><option value="100">Indonesia</option><option value="101">Iran (Islamic Republic of)</option><option value="102">Iraq</option><option value="103">Ireland</option><option value="254">Isle of Man</option><option value="104">Israel</option><option value="105">Italy</option><option value="106">Jamaica</option><option value="107">Japan</option><option value="257">Jersey</option><option value="108">Jordan</option><option value="109">Kazakhstan</option><option value="110">Kenya</option><option value="111">Kiribati</option><option value="253">Kosovo, Republic of</option><option value="114">Kuwait</option><option value="115">Kyrgyzstan</option><option value="116">Lao People's Democratic Republic</option><option value="117">Latvia</option><option value="118">Lebanon</option><option value="119">Lesotho</option><option value="120">Liberia</option><option value="121">Libyan Arab Jamahiriya</option><option value="122">Liechtenstein</option><option value="123">Lithuania</option><option value="124">Luxembourg</option><option value="125">Macau</option><option value="127">Madagascar</option><option value="128">Malawi</option><option value="129">Malaysia</option><option value="130">Maldives</option><option value="131">Mali</option><option value="132">Malta</option><option value="133">Marshall Islands</option><option value="134">Martinique</option><option value="135">Mauritania</option><option value="136">Mauritius</option><option value="137">Mayotte</option><option value="138">Mexico</option><option value="139">Micronesia, Federated States of</option><option value="140">Moldova, Republic of</option><option value="141">Monaco</option><option value="142">Mongolia</option><option value="242">Montenegro</option><option value="143">Montserrat</option><option value="144">Morocco</option><option value="145">Mozambique</option><option value="146">Myanmar</option><option value="147">Namibia</option><option value="148">Nauru</option><option value="149">Nepal</option><option value="150">Netherlands</option><option value="151">Netherlands Antilles</option><option value="152">New Caledonia</option><option value="153">New Zealand</option><option value="154">Nicaragua</option><option value="155">Niger</option><option value="156">Nigeria</option><option value="157">Niue</option><option value="158">Norfolk Island</option><option value="112">North Korea</option><option value="159">Northern Mariana Islands</option><option value="160">Norway</option><option value="161">Oman</option><option value="162">Pakistan</option><option value="163">Palau</option><option value="247">Palestinian Territory, Occupied</option><option value="164">Panama</option><option value="165">Papua New Guinea</option><option value="166">Paraguay</option><option value="167">Peru</option><option value="168">Philippines</option><option value="169">Pitcairn</option><option value="170">Poland</option><option value="171">Portugal</option><option value="172">Puerto Rico</option><option value="173">Qatar</option><option value="174">Reunion</option><option value="175">Romania</option><option value="176">Russian Federation</option><option value="177">Rwanda</option><option value="178">Saint Kitts and Nevis</option><option value="179">Saint Lucia</option><option value="180">Saint Vincent and the Grenadines</option><option value="181">Samoa</option><option value="182">San Marino</option><option value="183">Sao Tome and Principe</option><option value="184">Saudi Arabia</option><option value="185">Senegal</option><option value="243">Serbia</option><option value="186">Seychelles</option><option value="187">Sierra Leone</option><option value="188">Singapore</option><option value="189">Slovak Republic</option><option value="190">Slovenia</option><option value="191">Solomon Islands</option><option value="192">Somalia</option><option value="193" selected="selected">South Africa</option><option value="194">South Georgia &amp; South Sandwich Islands</option><option value="113">South Korea</option><option value="248">South Sudan</option><option value="195">Spain</option><option value="196">Sri Lanka</option><option value="249">St. Barthelemy</option><option value="197">St. Helena</option><option value="250">St. Martin (French part)</option><option value="198">St. Pierre and Miquelon</option><option value="199">Sudan</option><option value="200">Suriname</option><option value="201">Svalbard and Jan Mayen Islands</option><option value="202">Swaziland</option><option value="203">Sweden</option><option value="204">Switzerland</option><option value="205">Syrian Arab Republic</option><option value="206">Taiwan</option><option value="207">Tajikistan</option><option value="208">Tanzania, United Republic of</option><option value="209">Thailand</option><option value="210">Togo</option><option value="211">Tokelau</option><option value="212">Tonga</option><option value="213">Trinidad and Tobago</option><option value="255">Tristan da Cunha</option><option value="214">Tunisia</option><option value="215">Turkey</option><option value="216">Turkmenistan</option><option value="217">Turks and Caicos Islands</option><option value="218">Tuvalu</option><option value="219">Uganda</option><option value="220">Ukraine</option><option value="221">United Arab Emirates</option><option value="222">United Kingdom</option><option value="223">United States</option><option value="224">United States Minor Outlying Islands</option><option value="225">Uruguay</option><option value="226">Uzbekistan</option><option value="227">Vanuatu</option><option value="228">Vatican City State (Holy See)</option><option value="229">Venezuela</option><option value="230">Viet Nam</option><option value="231">Virgin Islands (British)</option><option value="232">Virgin Islands (U.S.)</option><option value="233">Wallis and Futuna Islands</option><option value="234">Western Sahara</option><option value="235">Yemen</option><option value="238">Zambia</option><option value="239">Zimbabwe</option>
+							</select>
+						  </div>
+						  
+						  <div class="form-group required col-sm-4">
+						    <label for="input-zone">Region / State</label>
+						    <select name="zone_id" id="input-zone" class="form-control">
+						      <option value=""> --- Please Select --- </option><option value="2961">Eastern Cape</option><option value="2962">Free State</option><option value="2963">Gauteng</option><option value="2964">KwaZulu-Natal</option><option value="2965">Limpopo</option><option value="2966">Mpumalanga</option><option value="2967">North West</option><option value="2968">Northern Cape</option><option value="2969">Western Cape</option>
+						    </select>
+						  </div>
+						  
+						  <div class="form-group col-sm-4">
+						    <label for="input-postcode">Post Code</label>
+							<input type="text" name="postcode" value="" placeholder="Post Code" id="input-postcode" class="form-control">
+						  </div>
+						  
+						  <div class="col-sm-12">
+						    <button type="button" id="button-quote" data-loading-text="Loading..." class="btn btn-primary">Get Quotes</button>
+						  </div>
+						  
+						</div>
+					  </form>
+					</div>
+				  </div>
+				</div>
+				
+				<div class="accordion-item">
+				  <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Use Gift Certificate</button></h2>
+				  
+				  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+				    <div class="accordion-body">
+					  <form>
+					    <label class="" for="input-coupon">Enter your gift certificate code here</label>
+					    <div class="input-group">
+					      <input type="text" name="coupon" value="" placeholder="Enter your gift certificate code here" id="input-coupon" class="form-control">
+					      <span class="input-group-btn"><input type="button" value="Apply Gift Certificate" id="button-coupon" data-loading-text="Loading..." class="btn btn-primary"></span>
+					    </div>
+					  </form>
+					</div>
+				  </div>
+				</div>
+			  </div><!--/ accordion -->
+			</div><!--/ cart-left -->
+			
+			<div class="col-sm-5 cart-right">
+			  <div class="cart-totals">
+			    <h3>Cart totals</h3>
+				<table class="table table-bordered">
+				  <tbody>
+				    <tr>
+					  <td class="text-right"><strong>Sub-Total:</strong></td>
+					  <td class="text-right">ZAR 14,047.83</td>
+					</tr>
+					
+					<tr>
+					  <td class="text-right"><strong>VAT (15%):</strong></td>
+					  <td class="text-right">ZAR 2,107.17</td>
+					</tr>
+					
+					<tr>
+					  <td class="text-right"><strong>Total:</strong></td>
+					  <td class="text-right">ZAR 16,155.00</td>
+					</tr>
+				  </tbody>
+				</table>
+			
+				<div class="proceed-checkout"><a href="#" class="checkout-button btn">Proceed to checkout</a></div>
+			  </div><!--/ cart-totals -->	  
+		    </div><!--/ right -->
+		  
+		  </div><!--/ row -->
+        </div><!--/ product-cart -->	  
+          
+      </div>	
+    </div><!--/ row -->	
+  </div>
+</section><!--/ mid-inner -->      
+
+<footer class="footer">  
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-sm-4 footer-left">
+        <div class="wg-1">
+          <div class="ft-logo"><a href="#"><img src="images/logo.png" alt="image"></a></div>
+		  <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempor ut labore et dolore magna enim ad minim veniam.</p>
+		  <div class="icon-ft">
+            <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+            <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+            <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+            <a target="_blank" href="#"><i class="fa fa-youtube"></i></a>
+          </div>
+        </div><!--/ wg-1 -->
+      </div><!--/ col-sm-3 -->
+	
+	  <div class="col-sm-8 footer-right">
+	    <div class="row">
+		  
+		  <div class="col-sm-4">
+		    <div class="wg-1">
+			  <h4>Information</h4>
+			  <ul>
+			    <li><a href="#">Membership Information and T&Cs </a></li>
+				<li><a href="#">About the DAN Shop</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Delivery and Shipping</a></li>
+				<li><a href="#">Returns Information</a></li>
+			  </ul>
+			</div><!--/ wg-1 -->
+		  </div><!--/ col-sm-4 -->
+		  
+		  <div class="col-sm-4">
+		    <div class="wg-1">
+			  <h4>Customer Service</h4>
+			  <ul>
+			    <li><a href="#">Contact Us</a></li>
+				<li><a href="#">Returns</a></li>
+				<li><a href="#">Site Map</a></li>
+				<li><a href="#">Order History</a></li>
+				<li><a href="#">Wish List</a></li>
+				<li><a href="#">Newsletter</a></li>
+			  </ul>
+			</div><!--/ wg-1 -->
+		  </div><!--/ col-sm-4 --> 
+		  
+		  <div class="col-sm-4">
+		    <div class="wg-1">
+			  <h4>Extras</h4>
+			  <ul>
+			    <li><a href="#">Brands</a></li>
+				<li><a href="#">Gift Certificates</a></li>
+				<li><a href="#">Affiliate</a></li>
+				<li><a href="#">Specials</a></li>
+			  </ul>
+			</div><!--/ wg-1 -->
+		  </div><!--/ col-sm-4 --> 
+           
+        </div><!-- row -->            
+      </div><!-- footer-right -->
+	  
+    </div><!-- row -->            
+  </div><!--/ container -->     
+  
+  <div class="ft-bottom">
+    <div class="container">
+      <div class="row">
+	  
+		<div class="col-sm-4"><p class="copyright">Copyright © 2023 DAN Shop. <br>All Rights Reserved.</p></div>
+		
+		<div class="col-sm-8">
+		  <div class="Newsletter">
+		    <h5>Stay up-to-date with our promotions!<span>No spam — we promise.</span></h5>
+			<form>
+			  <div class="input-group">
+			    <input class="form-control" type="email" placeholder="E-mail Address">
+			    <input type="submit" value="Submit" class="btn">
+			  </div>
+			</form>
+		  </div>		
+		</div>		
+        
+      </div><!--/ row -->
+    </div>
+  </div><!--/ ft-bottom -->
+</footer>

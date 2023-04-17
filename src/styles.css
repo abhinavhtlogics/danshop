@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/ngx-toastr/toastr.css";
+html{overflow-x:hidden;}
+html, body {height: 100%;}
+
+body{font-size: 15px; font-family: 'Open Sans', sans-serif; font-weight:400; color: #212121;}
+
+a{color:#dd1717; text-decoration:none;}
+a:hover, a:focus{color:#3c3e93; text-decoration:none;}
+img{max-width:100%; vertical-align:middle;}
+p{line-height:22px; margin:0 0 15px; text-align:justify;}
+
+h1, h2, h3, h4, h5, h6{font-family: 'Lato', sans-serif; font-weight:700; margin:0 0 10px;}
+h2{color:#3c3e93;}
+h3{color:#dd1717;}
+h4{color:#3c3e93;}
+
+.pad-0{padding:0 !important;}
+.mrb-0{margin-bottom:0px !important;}
+.mrb-10{margin-bottom:10px !important;}
+.mrb-20{margin-bottom:20px !important;}
+.mrb-30{margin-bottom:30px !important;}
+.mrb-40{margin-bottom:40px !important;}
+.mrb-50{margin-bottom:50px !important;}
+
+.container{z-index:3; position:relative;}
+.row > *{padding-right: 15px; padding-left: 15px;}
+
+
+.toast-container {
+    position: fixed !important;
+    
+  }
