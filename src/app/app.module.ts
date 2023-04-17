@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CartComponentComponent } from './cart-component/cart-component.component';
+import { InnerHeaderComponent } from './inner-header/inner-header.component';
 
 
 
@@ -28,7 +29,8 @@ import { CartComponentComponent } from './cart-component/cart-component.componen
     ProductsComponent,
     ProductDetailsComponent,
     HomepageComponent,
-    CartComponentComponent
+    CartComponentComponent,
+    InnerHeaderComponent
   ],
   imports: [
     BrowserModule,
